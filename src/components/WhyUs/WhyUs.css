@@ -1,0 +1,86 @@
+.whyus-section {
+  background-color: #f5f6fa;
+  padding: 70px 0;
+}
+
+.whyus-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.whyus-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #010231;
+  margin-bottom: 12px;
+}
+
+.whyus-header p {
+  font-size: 1.05rem;
+  color: #666;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.whyus-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.whyus-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 36px 24px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(1, 2, 49, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whyus-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(1, 2, 49, 0.15);
+}
+
+.whyus-icon-circle {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background-color: #010231;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.whyus-icon-circle i {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.whyus-card h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #010231;
+  margin: 0 0 10px 0;
+}
+
+.whyus-card p {
+  font-size: 0.92rem;
+  color: #777;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .whyus-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .whyus-grid {
+    grid-template-columns: 1fr;
+  }
+}

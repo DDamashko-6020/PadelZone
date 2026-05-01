@@ -1,0 +1,382 @@
+.reservations-page {
+  background-color: #f5f6fa;
+  min-height: 100vh;
+}
+
+/* Header */
+.reservations-header {
+  background: linear-gradient(135deg, #010231 0%, #0a7c5c 100%);
+  padding: 52px 0;
+  color: #ffffff;
+}
+
+.reservations-header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.reservations-header p {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* Body */
+.reservations-body {
+  padding: 48px 0 64px 0;
+}
+
+.reservations-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 28px;
+  align-items: start;
+}
+
+/* Tarjeta formulario */
+.res-form-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: 0 4px 20px rgba(1, 2, 49, 0.08);
+}
+
+.res-section h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #010231;
+  margin: 0 0 4px 0;
+}
+
+.res-subtitle {
+  font-size: 0.88rem;
+  color: #888;
+  margin: 0 0 24px 0;
+}
+
+.res-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.res-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.res-field.full {
+  margin-bottom: 20px;
+}
+
+.res-field label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.res-field input {
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.92rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background: #fff;
+  height: auto !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+
+.res-field input:focus {
+  border-color: #010231;
+}
+
+/* Select */
+.res-select-wrapper {
+  position: relative;
+}
+
+.res-select-wrapper select {
+  width: 100%;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 10px 36px 10px 14px;
+  font-size: 0.92rem;
+  color: #333;
+  outline: none;
+  appearance: none;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  display: block;
+  height: auto !important;
+}
+
+.res-select-wrapper select:focus {
+  border-color: #010231;
+}
+
+.res-select-wrapper i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+  font-size: 1.2rem;
+}
+
+/* Input con ícono */
+.res-input-icon {
+  position: relative;
+}
+
+.res-input-icon i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.res-input-icon input {
+  padding-left: 38px !important;
+  width: 100%;
+}
+
+/* Divider */
+.res-divider {
+  border: none;
+  border-top: 1.5px solid #f0f0f0;
+  margin: 28px 0;
+}
+
+/* Botón confirmar */
+.res-btn-confirm {
+  width: 100%;
+  background-color: #010231;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.res-btn-confirm:hover {
+  background-color: #020450;
+}
+
+/* Resumen */
+.res-summary-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 20px rgba(1, 2, 49, 0.08);
+  position: sticky;
+  top: 80px;
+}
+
+.res-summary-card h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #010231;
+  margin: 0 0 20px 0;
+}
+
+.res-summary-rows {
+  border-bottom: 1.5px solid #f0f0f0;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.res-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.res-summary-row span:first-child {
+  color: #999;
+}
+
+.res-summary-row span:last-child {
+  font-weight: 500;
+  color: #333;
+  text-align: right;
+  max-width: 160px;
+}
+
+.res-summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.res-summary-total span:first-child {
+  font-weight: 700;
+  color: #010231;
+  font-size: 1rem;
+}
+
+.res-total-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #010231;
+}
+
+/* Políticas */
+.res-policies {
+  background-color: #f0f4ff;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.res-policies p {
+  font-size: 0.88rem;
+  color: #010231;
+  margin: 0 0 8px 0;
+}
+
+.res-policies ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.res-policies ul li {
+  font-size: 0.82rem;
+  color: #555;
+  margin-bottom: 5px;
+  padding-left: 12px;
+  position: relative;
+}
+
+.res-policies ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #010231;
+}
+
+/* Modal */
+.res-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.res-modal {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.res-modal-icon i {
+  font-size: 4rem;
+  color: #00897b;
+}
+
+.res-modal h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #010231;
+  margin: 12px 0 8px 0;
+}
+
+.res-modal > p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.res-modal-details {
+  background: #f5f6fa;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.res-modal-details p {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 4px 0;
+}
+
+.res-modal-btn {
+  background-color: #010231;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 32px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.res-modal-btn:hover {
+  background-color: #020450;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .reservations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .res-summary-card {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .res-row {
+    grid-template-columns: 1fr;
+  }
+
+  .res-form-card {
+    padding: 24px;
+  }
+}
+
+/* Ocultar ícono nativo del input date */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Arreglo input fecha */
+.res-field input[type="date"] {
+  max-width: 70%;
+  cursor: pointer;
+}

@@ -1,0 +1,111 @@
+.navbar-main {
+  background-color: #010231 !important;
+  padding: 0 10px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(1, 2, 49, 0.5);
+}
+
+.nav-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.brand-logo {
+  display: flex !important;
+  align-items: center;
+  font-size: 1.5rem !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff !important;
+}
+
+nav ul a {
+  color: #ffffff !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul a:hover {
+  color: #a0d4ff !important;
+  background-color: transparent !important;
+}
+
+.btn-login {
+  border: 2px solid #ffffff !important;
+  border-radius: 25px !important;
+  padding: 0 16px !important;
+  margin-top: 15px;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center;
+  line-height: 36px !important;
+  height: 36px !important;
+  font-size: 0.95rem !important;
+}
+
+.btn-login:hover {
+  background-color: #ffffff !important;
+  color: #010231 !important;
+}
+
+.btn-login i {
+  font-size: 1.1rem;
+  margin-right: 6px;
+}
+
+nav ul li:last-child {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-user-name {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0 10px;
+}
+
+.nav-user-name i {
+  font-size: 1.2rem;
+  margin-right: 6px;
+}
+
+.btn-logout {
+  border: 2px solid #ff5252 !important;
+  border-radius: 25px !important;
+  padding: 0 14px !important;
+  margin-top: 15px;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center;
+  line-height: 32px !important;
+  height: 32px !important;
+  font-size: 0.85rem !important;
+  color: #ff5252 !important;
+  background-color: transparent !important;
+}
+
+.btn-logout:hover {
+  background-color: #ff5252 !important;
+  color: #ffffff !important;
+}
+
+.btn-logout i {
+  font-size: 1rem;
+  margin-right: 4px;
+}

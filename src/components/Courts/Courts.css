@@ -1,0 +1,499 @@
+.courts-section {
+  background-color: #ffffff;
+  padding: 70px 0 50px 0;
+}
+
+.courts-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.courts-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #010231;
+  margin-bottom: 12px;
+}
+
+.courts-header p {
+  font-size: 1rem;
+  color: #666;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* Carrusel */
+.courts-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 70px;
+}
+
+.courts-carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.courts-track {
+  display: flex;
+  gap: 32px;
+  will-change: transform;
+}
+
+/* Card */
+.court-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(1, 2, 49, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.court-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(1, 2, 49, 0.18);
+}
+
+.court-img-wrapper {
+  position: relative;
+}
+
+.court-img-wrapper img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+.court-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background-color: #00897b;
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.court-badge i {
+  font-size: 0.9rem;
+}
+
+.court-info {
+  padding: 20px;
+}
+
+.court-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.court-title-row h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #010231;
+  margin: 0;
+}
+
+.court-price {
+  color: #1565c0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.court-desc {
+  font-size: 0.88rem;
+  color: #666;
+  margin: 0 0 12px 0;
+}
+
+.court-capacity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.court-capacity i {
+  font-size: 1.1rem;
+  color: #010231;
+}
+
+.court-features-title {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #010231;
+  margin-bottom: 6px;
+}
+
+.court-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.court-features li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.court-features li i {
+  font-size: 0.95rem;
+  color: #00897b;
+}
+
+.court-btn {
+  width: 100%;
+  background-color: #010231 !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.court-btn:hover {
+  background-color: #020450 !important;
+}
+
+/* Flechas */
+.courts-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: #ffffff;
+  border: 2px solid #010231;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.courts-arrow:hover {
+  background-color: #010231;
+}
+
+.courts-arrow:hover i {
+  color: #ffffff;
+}
+
+.courts-arrow i {
+  color: #010231;
+  font-size: 1.8rem;
+}
+
+.courts-arrow.left { left: 12px; }
+.courts-arrow.right { right: 12px; }
+
+/* Dots */
+.courts-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.courts-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.courts-dot.active {
+  background-color: #010231;
+}
+
+/* Ver todas */
+.courts-footer {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.btn-outline-courts {
+  background: transparent;
+  border: 2px solid #010231;
+  color: #010231;
+  border-radius: 30px;
+  padding: 10px 28px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-courts:hover {
+  background-color: #010231;
+  color: #ffffff;
+}
+
+.btn-outline-courts i {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .courts-carousel-wrapper { padding: 10px 50px; }
+}
+
+/* Modal de Detalles de Cancha */
+.court-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.court-modal {
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.court-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.court-modal-close:hover {
+  background: #ffffff;
+  transform: scale(1.1);
+}
+
+.court-modal-close i {
+  font-size: 1.5rem;
+  color: #010231;
+}
+
+.court-modal-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+@media (max-width: 768px) {
+  .court-modal-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Imagen */
+.court-modal-img-wrapper {
+  position: relative;
+  height: 100%;
+  min-height: 300px;
+}
+
+.court-modal-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.court-modal-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #00897b;
+  color: #fff;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 2px 8px rgba(0, 137, 123, 0.4);
+}
+
+.court-modal-badge i {
+  font-size: 1rem;
+}
+
+/* Información */
+.court-modal-info {
+  padding: 40px 40px 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .court-modal-info {
+    padding: 30px 20px;
+  }
+}
+
+.court-modal-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.court-modal-title-row h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #010231;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.court-modal-price {
+  color: #1565c0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  background: #e3f2fd;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.court-modal-desc {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.court-modal-capacity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #555;
+  padding: 8px 0;
+}
+
+.court-modal-capacity i {
+  font-size: 1.2rem;
+  color: #010231;
+}
+
+.court-modal-features h6 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #010231;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.court-modal-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.court-modal-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #333;
+  padding: 6px 0;
+}
+
+.court-modal-features li i {
+  font-size: 1.1rem;
+  color: #00897b;
+}
+
+.court-modal-btn {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #010231 0%, #020450 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(1, 2, 49, 0.3);
+}
+
+.court-modal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(1, 2, 49, 0.4);
+  background: linear-gradient(135deg, #020450 0%, #030570 100%);
+}
+
+.court-modal-btn i {
+  font-size: 1.1rem;
+}
+}
