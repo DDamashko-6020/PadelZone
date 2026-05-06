@@ -248,9 +248,17 @@
   transition: all 0.3s ease;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+
 .btn-outline-courts:hover {
   background-color: #010231;
   color: #ffffff;
+  transform: scale(1.05);
 }
 
 .btn-outline-courts i {

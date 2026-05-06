@@ -222,8 +222,8 @@ function Courts() {
         ))}
       </div>
 
-      <div className="courts-footer">
-        <button className="btn-outline-courts waves-effect">
+      <div className="button-container"> 
+        <button className="btn-outline-courts" onClick={() => window.location.href = '/canchas'}>
           Ver Todas las Canchas <i className="material-icons right">arrow_forward</i>
         </button>
       </div>
