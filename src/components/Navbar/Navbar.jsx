@@ -21,7 +21,7 @@ function Navbar() {
 
         <ul className="right hide-on-med-and-down">
           <li><Link to="/">Inicio</Link></li>
-          <li><Link to="/#canchas">Canchas</Link></li>
+          <li><Link to="/canchas">Canchas</Link></li>
           <li><Link to="/reservar">Reservar</Link></li>
           <li><Link to="/#contacto">Contacto</Link></li>
           <li>
