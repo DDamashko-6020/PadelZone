@@ -1,74 +1,90 @@
-import { useEffect } from 'react'
-import './Carousel.css'
-
-import img1 from '../../img/CanchaPadel.jpg'
-import img2 from '../../img/CanchaPadel2.jpg'
-import img3 from '../../img/EquipoPadel.jpg'
+import React, { useState, useRef } from 'react';
+import { Carousel as BSCarousel } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import './Carousel.css';
 
 const slides = [
-  {
-    img: img1,
-    title: 'Canchas Premium',
-    subtitle: 'Superficies profesionales diseñadas para elevar tu juego al siguiente nivel'
+  { 
+    img: '/img/canchapadel.jpg', 
+    title: 'Canchas Premium', 
+    subtitle: 'Superficies profesionales con los mejores estándares' 
   },
-  {
-    img: img2,
-    title: 'Instalaciones de Primera',
-    subtitle: 'Espacios modernos con iluminación LED y todas las comodidades para ti'
+  { 
+    img: '/img/canchapadel1.jpg', 
+    title: 'Instalaciones de Primera', 
+    subtitle: 'Espacios modernos equipados con iluminación LED' 
   },
-  {
-    img: img3,
-    title: 'Únete a la Comunidad',
-    subtitle: 'Más de 500 jugadores activos te esperan. Reserva tu cancha hoy mismo'
-  }
-]
+  { 
+    img: '/img/padel1.jpg',
+    title: 'Nuestra Tienda', 
+    subtitle: 'Todo lo que necesitas para jugar al más alto nivel' 
+  },
+];
 
-function Carousel() {
-  useEffect(() => {
-    const el = document.querySelector('.carousel.carousel-slider')
-    if (el && window.M) {
-      window.M.Carousel.init(el, {
-        fullWidth: true,
-        indicators: true,
-      })
-    }
-  }, [])
+function MyCarousel() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const videoRef = useRef(null);
 
-  const move = (n) => {
-    const el = document.querySelector('.carousel.carousel-slider')
-    if (el && window.M) {
-      const instance = window.M.Carousel.getInstance(el)
-      instance.next(n)
+  const handleSelect = (selectedIndex) => {
+    // Si salimos del video, lo pausamos
+    if (selectedIndex !== 0) {
+      videoRef.current?.pause();
+    } else {
+      // Si volvemos al video, lo reproducimos desde el inicio
+      if (videoRef.current) {
+        videoRef.current.currentTime = 0;
+        videoRef.current.play();
+      }
     }
-  }
+    setActiveIndex(selectedIndex);
+  };
 
   return (
-    <div className="carousel-wrapper">
-
-      {/* Flecha izquierda */}
-      <button className="carousel-arrow left" onClick={() => move(-1)}>
-        <i className="material-icons">chevron_left</i>
-      </button>
-
-      <div className="carousel carousel-slider">
-        {slides.map((slide, i) => (
-          <div className="carousel-item" key={i}>
-            <img src={slide.img} alt={slide.title} />
-            <div className="carousel-overlay">
-              <h2>{slide.title}</h2>
-              <p>{slide.subtitle}</p>
-            </div>
+    <div className="carousel-root-container">
+      <BSCarousel
+        fade={true}
+        activeIndex={activeIndex}
+        onSelect={handleSelect}
+        interval={activeIndex === 0 ? null : 4000}
+        controls={true}
+        indicators={true}
+        pause={false}
+        className="main-bootstrap-carousel"
+      >
+        {/* Primer slide: VIDEO */}
+        <BSCarousel.Item className="custom-item-wrapper">
+          <div className="img-container">
+            <video
+              ref={videoRef}
+              className="d-block w-100 carousel-img"
+              src="/img/videopadel1.mp4"
+              autoPlay
+              muted
+              playsInline
+              onEnded={() => handleSelect(1)}
+            />
           </div>
+        </BSCarousel.Item>
+
+        {/* Slides de imágenes */}
+        {slides.map((slide, index) => (
+          <BSCarousel.Item key={index} className="custom-item-wrapper">
+            <div className="img-container">
+              <img
+                className="d-block w-100 carousel-img"
+                src={slide.img}
+                alt={slide.title}
+              />
+            </div>
+            <div className="carousel-overlay">
+              <h2 className="overlay-title">{slide.title}</h2>
+              <p className="overlay-subtitle">{slide.subtitle}</p>
+            </div>
+          </BSCarousel.Item>
         ))}
-      </div>
-
-      {/* Flecha derecha */}
-      <button className="carousel-arrow right" onClick={() => move(1)}>
-        <i className="material-icons">chevron_right</i>
-      </button>
-
+      </BSCarousel>
     </div>
-  )
+  );
 }
 
-export default Carousel
+export default MyCarousel;
