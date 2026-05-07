@@ -41,7 +41,12 @@ Esto iniciará la aplicación en `http://localhost:5173`
 
 - React 19
 - Vite
-- Node.js
-- Express
+- Node.js (servidor backend puro, sin dependencias externas)
 - Materialize CSS
 - React Router
+- ESLint (archivos de servidor ignorados intencionalmente)
+
+## Notas
+
+- Los archivos `server-simple.js`, `server-commonjs.js`, `server.js` y `test-api.js` usan CommonJS y están excluidos de ESLint para evitar conflictos con la configuración ES modules del proyecto.
+- El servidor backend funciona sin dependencias externas, solo requiere Node.js.
