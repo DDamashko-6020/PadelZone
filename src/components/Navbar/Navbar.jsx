@@ -23,7 +23,7 @@ function Navbar() {
           <li><Link to="/">Inicio</Link></li>
           <li><Link to="/canchas">Canchas</Link></li>
           <li><Link to="/reservar">Reservar</Link></li>
-          <li><Link to="/#contacto">Contacto</Link></li>
+          <li><Link to="/contacto">Contacto</Link></li>
           <li>
             {isAuthenticated ? (
               <div className="nav-user">
