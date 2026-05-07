@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer'
 import Home from './pages/Home/Home'
 import Reservations from './pages/Reservations/Reservations'
 import Login from './pages/Login/Login'
+import Register from './pages/Register/Register'
 import { AuthProvider, useAuth } from './contexts/AuthContext'
 import Courts from './pages/Courts/Courts'
 import Contact from './pages/Contact/Contact'
@@ -86,13 +87,21 @@ function App() {
               </PublicRoute>
             }
           />
-          <Route 
-          path="/canchas" 
-          element={<Courts />} 
+          <Route
+            path="/registro"
+            element={
+              <PublicRoute>
+                <Register />
+              </PublicRoute>
+            }
           />
-          <Route 
-          path="/contacto" 
-          element={<Contact />} 
+          <Route
+          path="/canchas"
+          element={<Courts />}
+          />
+          <Route
+          path="/contacto"
+          element={<Contact />}
           />
         </Routes>
         <Footer />

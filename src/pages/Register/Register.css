@@ -1,0 +1,262 @@
+.register-page {
+  min-height: calc(100vh - 128px);
+}
+
+.register-header {
+  background: linear-gradient(rgba(30, 60, 114, 0.8), rgba(30, 60, 114, 0.8)),
+              url('/img/CanchaPadel.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.register-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.register-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.register-body {
+  max-width: 500px;
+  margin: 0 auto 60px;
+}
+
+.register-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  padding: 40px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.register-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fee;
+  color: #c00;
+  padding: 14px 18px;
+  border-radius: 8px;
+  border-left: 4px solid #c00;
+  font-size: 0.9rem;
+}
+
+.register-error .material-icons {
+  font-size: 20px;
+}
+
+.register-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.register-field label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.register-input {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #1e3c72;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.register-input:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 0 0 4px rgba(30, 60, 114, 0.1);
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.register-input-password {
+  padding-right: 52px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #1e3c72;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+  color: #2a5298;
+  background: rgba(30, 60, 114, 0.1);
+}
+
+/* Checkbox Styles */
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #1e3c72;
+  cursor: pointer;
+  user-select: none;
+  line-height: 1.4;
+  margin-top: 5px;
+}
+
+.checkbox-input {
+  width: 18px;
+  height: 18px;
+  accent-color: #1e3c72;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.checkbox-input:hover {
+  transform: scale(1.1);
+}
+
+.checkbox-input:focus {
+  outline: 2px solid #2a5298;
+  outline-offset: 2px;
+}
+
+.checkbox-text {
+  flex: 1;
+  cursor: pointer;
+}
+
+.terms-link {
+  color: #1e3c72;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.terms-link:hover {
+  color: #2a5298;
+}
+
+.register-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.register-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 60, 114, 0.35);
+}
+
+.register-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.register-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.register-btn-loading {
+  background: linear-gradient(135deg, #2a5298 0%, #3a6ab8 100%);
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.register-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-links p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.login-link {
+  color: #1e3c72;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #2a5298;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .register-header {
+    padding: 40px 0;
+  }
+
+  .register-header h1 {
+    font-size: 2rem;
+  }
+
+  .register-card {
+    padding: 30px 20px;
+  }
+
+  .register-body {
+    margin: 0 20px 40px;
+  }
+}

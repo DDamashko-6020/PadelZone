@@ -3,8 +3,8 @@
 }
 
 .login-header {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-              url('/img/login.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(30, 60, 114, 0.8), rgba(30, 60, 114, 0.8)),
+              url('/img/CanchaPadel.jpg') center/cover no-repeat;
   color: #fff;
   padding: 60px 0;
   text-align: center;
@@ -76,28 +76,47 @@
 
 .login-field label {
   font-weight: 600;
-  color: #333;
+  color: #1e3c72;
   font-size: 0.95rem;
 }
 
-.login-input-icon {
+.login-input {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #1e3c72;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.login-input:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 0 0 4px rgba(30, 60, 114, 0.1);
+}
+
+.password-input-container {
   position: relative;
   display: flex;
   align-items: center;
 }
 
+.login-input-password {
+  padding-right: 52px;
+}
+
 .login-input-icon .material-icons {
   position: absolute;
   left: 16px;
-  color: #aaa;
+  color: #1e3c72;
   font-size: 20px;
   pointer-events: none;
 }
 
 .login-input-icon input {
   width: 100%;
-  padding: 16px 16px 16px 48px;
-  border: 2px solid #e0e0e0;
+  padding: 16px 52px 16px 48px;
+  border: 2px solid #1e3c72;
   border-radius: 10px;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -107,6 +126,28 @@
 .login-input-icon input:focus {
   border-color: #1e3c72;
   box-shadow: 0 0 0 4px rgba(30, 60, 114, 0.1);
+  padding-right: 52px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #1e3c72;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+  color: #2a5298;
+  background: rgba(30, 60, 114, 0.1);
 }
 
 .login-btn {
@@ -184,13 +225,72 @@
   content: '';
   flex: 1;
   height: 1px;
-  background: #e0e0e0;
+  background: #1e3c72;
 }
 
 .login-divider span {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+/* Checkbox Styles */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #1e3c72;
+  cursor: pointer;
+  user-select: none;
+  line-height: 1.4;
+  margin-top: 5px;
+}
+
+.checkbox-input {
+  width: 18px;
+  height: 18px;
+  accent-color: #1e3c72;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.checkbox-input:hover {
+  transform: scale(1.1);
+}
+
+.checkbox-input:focus {
+  outline: 2px solid #2a5298;
+  outline-offset: 2px;
+}
+
+.checkbox-text {
+  flex: 1;
+  cursor: pointer;
+}
+
+/* Links */
+.login-links {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.forgot-password-link {
+  background: none;
+  border: none;
+  color: #1e3c72;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.forgot-password-link:hover {
+  color: #2a5298;
+  background: rgba(30, 60, 114, 0.1);
 }
 
 .login-guest {
@@ -204,6 +304,10 @@
 }
 
 .login-btn-guest {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   width: 100%;
   padding: 14px 24px;
   background: transparent;
@@ -212,11 +316,13 @@
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;
-  cursor: pointer;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .login-btn-guest:hover {
-  background: #1e3c72;
-  color: white;
+  background-color: #1e3c72;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 60, 114, 0.3);
 }
