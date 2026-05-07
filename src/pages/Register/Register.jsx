@@ -263,16 +263,18 @@ function Register() {
 
             {/* Terms and Conditions */}
             <div className="register-field">
-              <label className="checkbox-label">
+              <label className="checkbox-container">
                 <input
                   type="checkbox"
                   checked={acceptTerms}
                   onChange={(e) => setAcceptTerms(e.target.checked)}
                   aria-describedby="terms-help"
                   required
+                  className="checkbox-input"
                 />
-                <span className="checkmark"></span>
-                Acepto los <a href="#" className="terms-link">términos y condiciones</a> y la <a href="#" className="terms-link">política de privacidad</a>
+                <span className="checkbox-text">
+                  Acepto los <a href="#" className="terms-link">términos y condiciones</a> y la <a href="#" className="terms-link">política de privacidad</a>
+                </span>
               </label>
             </div>
 

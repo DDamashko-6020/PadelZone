@@ -3,7 +3,7 @@
 }
 
 .register-header {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  background: linear-gradient(rgba(30, 60, 114, 0.8), rgba(30, 60, 114, 0.8)),
               url('/img/CanchaPadel.jpg') center/cover no-repeat;
   color: #fff;
   padding: 60px 0;
@@ -128,47 +128,41 @@
 }
 
 /* Checkbox Styles */
-.checkbox-label {
+.checkbox-container {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 10px;
   font-size: 0.9rem;
   color: #1e3c72;
   cursor: pointer;
   user-select: none;
   line-height: 1.4;
+  margin-top: 5px;
 }
 
-.checkbox-label input[type="checkbox"] {
-  display: none;
-  margin-top: 2px;
-}
-
-.checkmark {
+.checkbox-input {
   width: 18px;
   height: 18px;
-  border: 2px solid #1e3c72;
-  border-radius: 3px;
-  position: relative;
+  accent-color: #1e3c72;
+  cursor: pointer;
+  border-radius: 4px;
   transition: all 0.3s ease;
-  flex-shrink: 0;
   margin-top: 2px;
+  flex-shrink: 0;
 }
 
-.checkbox-label input[type="checkbox"]:checked + .checkmark {
-  background: #1e3c72;
-  border-color: #1e3c72;
+.checkbox-input:hover {
+  transform: scale(1.1);
 }
 
-.checkbox-label input[type="checkbox"]:checked + .checkmark::after {
-  content: '✓';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
+.checkbox-input:focus {
+  outline: 2px solid #2a5298;
+  outline-offset: 2px;
+}
+
+.checkbox-text {
+  flex: 1;
+  cursor: pointer;
 }
 
 .terms-link {

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate, useLocation, Link } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
+import ForgotPassword from '../../components/ForgotPassword/ForgotPassword'
 import './Login.css'
 
 function Login() {
@@ -12,6 +13,7 @@ function Login() {
   const [loading, setLoading] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
   const [rememberEmail, setRememberEmail] = useState(!!localStorage.getItem('rememberedEmail'))
+  const [showForgotPassword, setShowForgotPassword] = useState(false)
 
   const navigate = useNavigate()
   const location = useLocation()
@@ -174,15 +176,15 @@ function Login() {
 
             {/* Remember Email */}
             <div className="login-field">
-              <label className="checkbox-label">
+              <label className="checkbox-container">
                 <input
                   type="checkbox"
                   checked={rememberEmail}
                   onChange={handleRememberEmailChange}
                   aria-describedby="remember-help"
+                  className="checkbox-input"
                 />
-                <span className="checkmark"></span>
-                Recordar mi email
+                <span className="checkbox-text">Recordar mi email</span>
               </label>
             </div>
 
@@ -210,7 +212,7 @@ function Login() {
               <button
                 type="button"
                 className="forgot-password-link"
-                onClick={() => alert('Funcionalidad próximamente disponible')}
+                onClick={() => setShowForgotPassword(true)}
                 aria-label="Recuperar contraseña olvidada"
               >
                 ¿Olvidaste tu contraseña?
@@ -237,6 +239,12 @@ function Login() {
            </div>
         </div>
       </div>
+
+      {/* Forgot Password Modal */}
+      <ForgotPassword
+        isOpen={showForgotPassword}
+        onClose={() => setShowForgotPassword(false)}
+      />
     </div>
   )
 }
