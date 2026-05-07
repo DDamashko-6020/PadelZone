@@ -1,16 +1,52 @@
-# React + Vite
+# PadelZone - Club de Pádel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para el club de pádel PadelZone ubicada en Neiva, Huila, Colombia.
 
-Currently, two official plugins are available:
+## Cómo ejecutar el proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+#### 1. Instalar dependencias del frontend:
+```bash
+npm install
+```
 
-## React Compiler
+#### 2. Ejecutar el servidor backend (en una terminal):
+```bash
+npm run server
+```
+Esto iniciará el servidor en `http://localhost:3001` (sin dependencias externas)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+#### 3. Ejecutar el frontend:
+```bash
+npm run dev
+```
+Esto iniciará la aplicación en `http://localhost:5173`
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Arquitectura
+
+- **Frontend**: React + Vite
+- **Backend**: Node.js puro (sin dependencias externas)
+- **Chatbot**: Respuestas predefinidas inteligentes
+- **API**: HTTP nativo con CORS habilitado
+
+## Características
+
+- Información del club de pádel
+- Chatbot interactivo con respuestas inteligentes
+- Diseño responsivo con Materialize CSS
+- Sistema de reservas (sección en desarrollo)
+- **Servidor backend sin dependencias** - funciona con solo Node.js
+
+## Tecnologías utilizadas
+
+- React 19
+- Vite
+- Node.js (servidor backend puro, sin dependencias externas)
+- Materialize CSS
+- React Router
+- ESLint (archivos de servidor ignorados intencionalmente)
+
+## Notas
+
+- Los archivos `server-simple.js`, `server-commonjs.js`, `server.js` y `test-api.js` usan CommonJS y están excluidos de ESLint para evitar conflictos con la configuración ES modules del proyecto.
+- El servidor backend funciona sin dependencias externas, solo requiere Node.js.
