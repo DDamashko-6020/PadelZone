@@ -146,3 +146,8 @@
     gap: 32px;
   }
 }
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+}

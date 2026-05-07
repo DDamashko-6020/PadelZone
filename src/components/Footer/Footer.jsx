@@ -1,5 +1,6 @@
 import './Footer.css'
 
+
 function Footer() {
   return (
     <footer className="footer">
@@ -17,6 +18,7 @@ function Footer() {
               <a href="#"><i className="material-icons">public</i></a>
               <a href="#"><i className="material-icons">photo_camera</i></a>
               <a href="#"><i className="material-icons">play_circle</i></a>
+              <a href="#"><i className= "material-icons">facebook</i></a> 
             </div>
           </div>
 
