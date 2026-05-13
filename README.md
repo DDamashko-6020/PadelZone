@@ -2,49 +2,60 @@
 
 Aplicación web para el club de pádel PadelZone ubicada en Neiva, Huila, Colombia.
 
-## Cómo ejecutar el proyecto
+## 🚀 Cómo ejecutar el proyecto
 
-#### 1. Instalar dependencias del frontend:
+### Opción ultra-rápida (Windows):
 ```bash
-npm install
+start.bat  # Ejecuta todo automáticamente
 ```
 
-#### 2. Ejecutar el servidor backend (en una terminal):
+### Opción simple:
 ```bash
-npm run server
+npm install  # Instalar dependencias
+npm run dev  # Ejecutar solo el frontend
 ```
-Esto iniciará el servidor en `http://localhost:3001` (sin dependencias externas)
 
-#### 3. Ejecutar el frontend:
-```bash
-npm run dev
-```
-Esto iniciará la aplicación en `http://localhost:5173`
+### Abrir en el navegador
+Ve a `http://localhost:5173` y navega a la sección "Contacto" para probar el chatbox interactivo con botones.
 
 
-## Arquitectura
+## 🏗️ Arquitectura
 
-- **Frontend**: React + Vite
-- **Backend**: Node.js puro (sin dependencias externas)
-- **Chatbot**: Respuestas predefinidas inteligentes
-- **API**: HTTP nativo con CORS habilitado
+- **Frontend**: React + Vite (100% frontend)
+- **Chatbot**: Sistema interactivo con botones de opciones
+- **Respuestas**: Predefinidas e inteligentes sobre PadelZone
+- **Sin backend**: Todo funciona en el navegador
 
 ## Características
 
-- Información del club de pádel
-- Chatbot interactivo con respuestas inteligentes
+- Información completa del club de pádel
+- **Chatbot interactivo con botones de opciones** (sin escribir)
 - Diseño responsivo con Materialize CSS
 - Sistema de reservas (sección en desarrollo)
+- **100% frontend** - sin servidor backend necesario
+
+## 🎯 Chatbot Interactivo
+
+El chatbox funciona **100% en el frontend** con un sistema de botones interactivos:
+
+- **Horarios**: Consulta disponibilidad del club
+- **Precios**: Lista completa de tarifas por cancha
+- **Reservas**: Información sobre reservas online
+- **Contacto**: Datos de contacto completos
+- **Servicios**: Todos los servicios disponibles
+- **Ubicación**: Dirección del club
+- **Políticas**: Reglas y políticas del club
+
+**Sin escribir texto** - solo haz clic en los botones para obtener información instantánea.
 - **Servidor backend sin dependencias** - funciona con solo Node.js
 
 ## Tecnologías utilizadas
 
 - React 19
 - Vite
-- Node.js (servidor backend puro, sin dependencias externas)
 - Materialize CSS
 - React Router
-- ESLint (archivos de servidor ignorados intencionalmente)
+- **100% Frontend** - Sin backend ni APIs externas
 
 ## Notas
 
