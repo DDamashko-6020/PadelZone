@@ -6,14 +6,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "server": "node server-simple.js",
-    "start": "concurrently \"npm run server\" \"npm run dev\""
+    "preview": "vite preview"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
     "materialize-css": "^1.0.0",
     "react": "^19.2.5",
     "react-bootstrap": "^2.10.10",
@@ -25,7 +21,6 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
-    "concurrently": "^8.2.2",
     "eslint": "^9.39.4",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
