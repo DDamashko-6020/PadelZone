@@ -26,11 +26,9 @@ function MyCarousel() {
   const videoRef = useRef(null);
 
   const handleSelect = (selectedIndex) => {
-    // Si salimos del video, lo pausamos
     if (selectedIndex !== 0) {
       videoRef.current?.pause();
     } else {
-      // Si volvemos al video, lo reproducimos desde el inicio
       if (videoRef.current) {
         videoRef.current.currentTime = 0;
         videoRef.current.play();
@@ -52,23 +50,27 @@ function MyCarousel() {
         className="main-bootstrap-carousel"
       >
         {/* Primer slide: VIDEO */}
-        <BSCarousel.Item className="custom-item-wrapper">
-          <div className="img-container">
-            <video
-              ref={videoRef}
-              className="d-block w-100 carousel-img"
-              src="/img/videopadel1.mp4"
-              autoPlay
-              muted
-              playsInline
-              onEnded={() => handleSelect(1)}
-            />
-          </div>
-        </BSCarousel.Item>
+      <BSCarousel.Item>
+        <div className="img-container">
+          <video
+            ref={videoRef}
+            className="d-block w-100 carousel-img"
+            src="/img/videopadel1.mp4"
+            autoPlay
+            muted
+            playsInline
+            onEnded={() => handleSelect(1)}
+          />
+        </div>
+        <div className="carousel-overlay video-overlay">
+          <h2 className="overlay-title">¡Bienvenidos a PadelZone!</h2>
+          <p className="overlay-subtitle">El mejor lugar para jugar, aprender y disfrutar del pádel</p>
+        </div>
+      </BSCarousel.Item>
 
         {/* Slides de imágenes */}
         {slides.map((slide, index) => (
-          <BSCarousel.Item key={index} className="custom-item-wrapper">
+          <BSCarousel.Item key={index}>
             <div className="img-container">
               <img
                 className="d-block w-100 carousel-img"
@@ -82,6 +84,7 @@ function MyCarousel() {
             </div>
           </BSCarousel.Item>
         ))}
+
       </BSCarousel>
     </div>
   );

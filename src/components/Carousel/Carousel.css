@@ -1,50 +1,48 @@
-/* ============================================================
-   ESTILOS DE EMERGENCIA - BLOQUEO DE MATERIALIZE
-   ============================================================ */
-
-/* Contenedor raíz: asegura que el carrusel sea visible */
 .carousel-root-container {
   width: 100% !important;
-  height: 100vh !important;
+  height: calc(100vh - 64px) !important;
   min-height: 500px !important;
   background-color: #111 !important;
   position: relative !important;
-  display: block !important;
   overflow: hidden !important;
 }
 
-/* Forzar que el interior de Bootstrap ocupe todo el espacio */
 .main-bootstrap-carousel,
-.main-bootstrap-carousel .carousel-inner,
+.main-bootstrap-carousel .carousel-inner {
+  height: 100% !important;
+  width: 100% !important;
+}
+
 .main-bootstrap-carousel .carousel-item {
   height: 100% !important;
   width: 100% !important;
-  display: block !important;
-}
-
-/* Evitar que Materialize oculte los slides */
-.custom-item-wrapper {
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out !important;
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
-  visibility: hidden !important;
+  opacity: 0 !important;
+  transition: opacity 0.5s ease-in-out !important;
+  display: block !important;
+  visibility: visible !important;
 }
 
-/* Mostrar solo el slide que Bootstrap marca como activo */
-.custom-item-wrapper.active {
+.main-bootstrap-carousel .carousel-item.active {
   opacity: 1 !important;
-  visibility: visible !important;
-  position: relative !important;
   z-index: 5 !important;
 }
 
-/* Contenedor de la imagen */
+
+.main-bootstrap-carousel .carousel-item-next,
+.main-bootstrap-carousel .carousel-item-prev {
+  opacity: 0 !important;
+  z-index: 4 !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
 .img-container {
   width: 100% !important;
   height: 100% !important;
-  background: #000;
+  background: #000 !important;
 }
 
 .carousel-img {
@@ -55,9 +53,6 @@
   display: block !important;
 }
 
-/* ============================================================
-   TEXTO Y OVERLAY (EL CORAZÓN DEL DISEÑO)
-   ============================================================ */
 .carousel-overlay {
   position: absolute !important;
   bottom: 12% !important;
@@ -66,7 +61,7 @@
   color: #ffffff !important;
   z-index: 10 !important;
   text-align: left !important;
-  pointer-events: none;
+  pointer-events: none !important;
 }
 
 .overlay-title {
@@ -83,20 +78,23 @@
   font-size: clamp(1rem, 2.5vw, 1.8rem) !important;
   font-weight: 300 !important;
   text-shadow: 1px 2px 8px rgba(0,0,0,0.8) !important;
-  max-width: 800px;
+  max-width: 800px !important;
 }
 
-/* Asegurar que las flechas y puntos se vean */
 .carousel-control-prev,
 .carousel-control-next,
 .carousel-indicators {
   z-index: 20 !important;
 }
 
-/* Parche: Si Materialize borra los iconos, los forzamos */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   width: 3.5rem !important;
   height: 3.5rem !important;
   filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5)) !important;
+}
+
+.video-overlay {
+  bottom: auto !important;
+  top: -3% !important;
 }
