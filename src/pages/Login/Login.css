@@ -204,16 +204,21 @@
 }
 
 .login-btn-guest {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   width: 100%;
-  padding: 14px 24px;
-  background: transparent;
-  color: #1e3c72;
-  border: 2px solid #1e3c72;
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  border: none;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: 10px;
 }
 
 .login-btn-guest:hover {
