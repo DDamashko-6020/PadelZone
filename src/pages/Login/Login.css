@@ -225,3 +225,20 @@
   background: #1e3c72;
   color: white;
 }
+.login-links {
+  text-align: left;
+}
+
+.forgot-password-link {
+  background: none;
+  border: none;
+  color: #1e3c72;
+  font-size: 0.88rem;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.forgot-password-link:hover {
+  color: #2a5298;
+}
