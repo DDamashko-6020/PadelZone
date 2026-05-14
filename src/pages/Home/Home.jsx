@@ -6,14 +6,12 @@ import MyCarousel from '../../components/Carousel/Carousel'
 function Home() {
   return (
     <>
-      <MyCarousel /> 
-      <div className="container">
-        <WhyUs />
-        <Courts />
-        <Services />
-      </div>
+      <MyCarousel />
+      <WhyUs />
+      <Courts />
+      <Services />
     </>
   )
 }
 
-export default Home; // <-- REVISA QUE ESTO ESTÉ EN TU ARCHIVO HOME.JSX
+export default Home;
