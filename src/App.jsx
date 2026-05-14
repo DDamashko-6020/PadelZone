@@ -9,6 +9,7 @@ import Register from './pages/Register/Register'
 import { AuthProvider, useAuth } from './contexts/AuthContext'
 import Courts from './pages/Courts/Courts'
 import Contact from './pages/Contact/Contact'
+import Profile from './pages/Profile/Profile'
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth()
@@ -95,13 +96,15 @@ function App() {
               </PublicRoute>
             }
           />
+          <Route path="/canchas" element={<Courts />} />
+          <Route path="/contacto" element={<Contact />} />
           <Route
-          path="/canchas"
-          element={<Courts />}
-          />
-          <Route
-          path="/contacto"
-          element={<Contact />}
+            path="/perfil"
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }
           />
         </Routes>
         <Footer />

@@ -27,7 +27,7 @@ function Navbar() {
           <li>
             {isAuthenticated ? (
               <div className="nav-user">
-                <span className="nav-user-name">
+                <span className="nav-user-name" onClick={() => navigate('/perfil')} style={{cursor:'pointer'}}>
                   <i className="material-icons left">person</i>
                   {user?.name || 'Usuario'}
                 </span>
