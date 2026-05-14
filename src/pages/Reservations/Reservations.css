@@ -380,3 +380,404 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   max-width: 70%;
   cursor: pointer;
 }
+
+/* Preview de cancha */
+.res-court-preview {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f5f6fa;
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 12px;
+  border: 1.5px solid #e8eaf6;
+}
+
+.res-court-preview img {
+  width: 110px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.res-court-preview-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.res-court-preview-name {
+  font-weight: 700;
+  color: #010231;
+  font-size: 0.95rem;
+}
+
+.res-court-preview-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #00897b;
+  color: #fff;
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.res-court-preview-badge i {
+  font-size: 0.85rem;
+}
+
+.res-court-preview-price {
+  font-size: 0.9rem;
+  color: #1565c0;
+  font-weight: 600;
+}
+
+/* Indicador duración */
+.res-duration-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #e8eaf6;
+  color: #010231;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.res-duration-badge i {
+  font-size: 1.1rem;
+  color: #010231;
+}
+
+/* Botón selector de cancha */
+.res-court-selector-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.res-court-selector-btn:hover {
+  border-color: #010231;
+  background: #f8f9ff;
+}
+
+.res-court-selector-btn.selected {
+  border-color: #010231;
+  background: #f8f9ff;
+}
+
+.res-court-selector-btn img {
+  width: 60px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.res-court-selector-placeholder {
+  width: 60px;
+  height: 42px;
+  border-radius: 6px;
+  background: #e8eaf6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.res-court-selector-placeholder i {
+  color: #010231;
+  font-size: 1.4rem;
+}
+
+.res-court-selector-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.res-court-selector-name {
+  font-weight: 700;
+  color: #010231;
+  font-size: 0.95rem;
+}
+
+.res-court-selector-sub {
+  font-size: 0.82rem;
+  color: #888;
+}
+
+.res-court-selector-text {
+  flex: 1;
+  font-size: 0.92rem;
+  color: #666;
+}
+
+.res-court-selector-change {
+  color: #888;
+  font-size: 1.1rem !important;
+}
+
+/* Preview grande */
+.res-court-preview-large {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 200px;
+  margin-top: 12px;
+}
+
+.res-court-preview-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.res-court-preview-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  background: linear-gradient(to top, rgba(1,2,49,0.85), transparent);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.res-court-preview-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #00897b;
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.res-court-preview-badge i {
+  font-size: 0.85rem;
+}
+
+.res-court-preview-text {
+  text-align: right;
+}
+
+.res-court-preview-text h6 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 2px 0;
+}
+
+.res-court-preview-text p {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* Duración */
+.res-duration-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #e8eaf6;
+  color: #010231;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.res-duration-badge i {
+  font-size: 1.1rem;
+}
+
+/* Modal selector */
+.court-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.court-modal {
+  background: #fff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 780px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+.court-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 28px 16px;
+  border-bottom: 1.5px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+}
+
+.court-modal-header h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #010231;
+  margin: 0;
+}
+
+.court-modal-close {
+  background: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.court-modal-close:hover {
+  background: #e0e0e0;
+}
+
+.court-modal-close i {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.court-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 24px 28px;
+}
+
+.court-modal-card {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 2px solid #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.court-modal-card:hover {
+  border-color: #010231;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(1,2,49,0.15);
+}
+
+.court-modal-card.active {
+  border-color: #010231;
+  box-shadow: 0 0 0 3px rgba(1,2,49,0.15);
+}
+
+.court-modal-img {
+  position: relative;
+}
+
+.court-modal-img img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.court-modal-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #00897b;
+  color: #fff;
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.court-modal-badge i {
+  font-size: 0.8rem;
+}
+
+.court-modal-selected-check {
+  position: absolute;
+  inset: 0;
+  background: rgba(1,2,49,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.court-modal-selected-check i {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.court-modal-info {
+  padding: 12px 14px;
+}
+
+.court-modal-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.court-modal-name {
+  font-weight: 700;
+  color: #010231;
+  font-size: 0.9rem;
+}
+
+.court-modal-price {
+  color: #1565c0;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.court-modal-desc {
+  font-size: 0.78rem;
+  color: #888;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .court-modal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
