@@ -6,6 +6,7 @@
 .services-header {
   text-align: center;
   margin-bottom: 50px;
+  margin-top: -50px;
 }
 
 .services-header h2 {
@@ -13,8 +14,10 @@
   font-weight: 700;
   color: #010231;
   margin-bottom: 12px;
+  display: inline-block;
+  border-bottom: 3px solid #010231;
+  padding-bottom: 8px;
 }
-
 .services-header p {
   font-size: 1rem;
   color: #666;

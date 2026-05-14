@@ -15,3 +15,24 @@
   align-items: center;
   min-height: 60vh;
 }
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #010231;
+  text-align: center;
+  margin-bottom: 8px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #010231;
+  display: inline-block;
+}
+
+.section-title-wrapper {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title-wrapper p {
+  font-size: 1.05rem;
+  color: #666;
+  margin-top: 12px;
+}
