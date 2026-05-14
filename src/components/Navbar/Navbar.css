@@ -67,9 +67,11 @@ nav ul li:last-child {
 
 
 .nav-user {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .nav-user-name {
@@ -90,16 +92,18 @@ nav ul li:last-child {
   border: 2px solid #ff5252 !important;
   border-radius: 25px !important;
   padding: 0 14px !important;
-  margin-top: 15px;
+  margin: 0 !important;           /* ← era margin-top: 15px */
   transition: all 0.3s ease !important;
   display: flex !important;
-  align-items: center;
-  line-height: 32px !important;
-  height: 32px !important;
+  align-items: center !important;
+  line-height: normal !important; /* ← evita conflicto con Materialize */
+  height: 36px !important;
   font-size: 0.85rem !important;
   color: #ff5252 !important;
   background-color: transparent !important;
+  box-shadow: none !important;    /* ← Materialize agrega sombra a botones */
 }
+
 
 .btn-logout:hover {
   background-color: #ff5252 !important;
