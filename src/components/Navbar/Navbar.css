@@ -92,16 +92,16 @@ nav ul li:last-child {
   border: 2px solid #ff5252 !important;
   border-radius: 25px !important;
   padding: 0 14px !important;
-  margin: 0 !important;           /* ← era margin-top: 15px */
+  margin: 0 !important;          
   transition: all 0.3s ease !important;
   display: flex !important;
   align-items: center !important;
-  line-height: normal !important; /* ← evita conflicto con Materialize */
+  line-height: normal !important;
   height: 36px !important;
   font-size: 0.85rem !important;
   color: #ff5252 !important;
   background-color: transparent !important;
-  box-shadow: none !important;    /* ← Materialize agrega sombra a botones */
+  box-shadow: none !important;
 }
 
 
